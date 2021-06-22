@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/flImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/svInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageMinas"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/mg" />
+
+        <TextView
+            android:id="@+id/tvMinas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#30000000"
+            android:paddingRight="15dp"
+            android:text="Minas Gerais"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/svInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flImage"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llInfo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvMinasGerais"
+                app:layout_constraintEnd_toStartOf="@+id/llBandeira"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Área:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvArea2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="586 522,122 km²"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDensidade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Densidade: "
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDensidade2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36,3 hab./km² "
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvElevacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elevação:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvElevacao2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="815 m  "
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPopulacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="População:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPopulacao2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21 292 666 hab. "
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBandeira"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/tvMinasGerais"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llInfo"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageBandeira"
+                    android:layout_width="149dp"
+                    android:layout_height="96dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/bandeiraminas" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMinasGerais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Minas Gerais é uma das 27 unidades federativas do Brasil, sendo o quarto estado com a maior área territorial e o segundo em quantidade de habitantes, localizada na Região Sudeste do país. Limita-se ao sul e sudoeste com São Paulo, a oeste com Mato Grosso do Sul, a noroeste com Goiás e Distrito Federal, a norte e nordeste com a Bahia, a leste com o Espírito Santo e a sudeste com o Rio de Janeiro. Seu território é subdividido em 853 municípios, a maior quantidade dentre os estados brasileiros."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llInfo"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_constraintBottom_toBottomOf="@+id/svInfo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageBandeira"-->
+    <!--                android:layout_width="165dp"-->
+    <!--                android:layout_height="114dp"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintHorizontal_bias="0.933"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:srcCompat="@drawable/bandeiraminas" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvArea"-->
+    <!--                android:layout_width="38dp"-->
+    <!--                android:layout_height="22dp"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_marginEnd="201dp"-->
+    <!--                android:layout_marginBottom="8dp"-->
+    <!--                android:text="Área:"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/tvDensidade"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvDensidade"-->
+    <!--                android:layout_width="84dp"-->
+    <!--                android:layout_height="29dp"-->
+    <!--                android:layout_marginStart="10dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_marginEnd="145dp"-->
+    <!--                android:layout_marginBottom="8dp"-->
+    <!--                android:text="Densidade:"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/tvElevacao"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.153"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvArea" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvElevacao"-->
+    <!--                android:layout_width="71dp"-->
+    <!--                android:layout_height="28dp"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_marginEnd="174dp"-->
+    <!--                android:layout_marginBottom="8dp"-->
+    <!--                android:text="Elevação:"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/tvPopulacao"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvDensidade" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvPopulacao"-->
+    <!--                android:layout_width="81dp"-->
+    <!--                android:layout_height="24dp"-->
+    <!--                android:layout_marginStart="7dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_marginEnd="165dp"-->
+    <!--                android:text="População:"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvElevacao" />-->
+
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvDensidade2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="19dp"-->
+    <!--                android:layout_marginEnd="46dp"-->
+    <!--                android:layout_marginBottom="26dp"-->
+    <!--                android:text="34 hab./km²"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/tvElevacao2"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="1.0"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/tvDensidade"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvArea2"-->
+    <!--                app:layout_constraintVertical_bias="0.0" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvElevacao2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginEnd="80dp"-->
+    <!--                android:layout_marginBottom="48dp"-->
+    <!--                android:text="815 m "-->
+    <!--                android:textColor="@color/black"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/tvElevacao" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvPopulacao2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="15dp"-->
+    <!--                android:text="6 603 hab."-->
+    <!--                android:textColor="@color/black"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageBandeira"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/tvPopulacao"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvElevacao2"-->
+    <!--                app:layout_constraintVertical_bias="0.827" />-->
